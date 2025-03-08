@@ -3,95 +3,88 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
-    background: #f4f4f4;
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #000428;
     overflow: hidden;
 }
 
-/* Background Animation */
+/* Futuristic AI Background */
 .container {
     position: absolute;
-    background-image: radial-gradient(circle at 50% 50%, #0000 0, #0000 2px, hsl(0 0 4%) 2px);
-    background-size: 8px 8px;
     width: 100%;
     height: 100%;
+    background: radial-gradient(circle at center, #0044ff 20%, #000428 80%);
+    overflow: hidden;
 }
 
-.container::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    backdrop-filter: hue-rotate(90deg);
-    mask: linear-gradient(45deg, #0000, #000);
-    animation: rotaty 5s linear infinite;
-    transform-origin: center;
-}
-
+/* Animated Circuit Lines */
 .container::before {
     content: "";
     position: absolute;
-    inset: -8em;
-    z-index: -1;
-    --f: blur(7em) brightness(5);
-    --c: #09f;
-    animation: blobs-1e28bd3d 150s linear infinite, thingy 5s linear infinite;
-    background-color: #000;
-    background-image: radial-gradient(ellipse 66px 50px at 50% 50%, #0f0 0%, transparent 100%),
-                      radial-gradient(ellipse 77px 60px at 50% 50%, #0f0 0%, transparent 100%),
-                      radial-gradient(ellipse 78px 100px at 50% 50%, #0f0 0%, transparent 100%),
-                      radial-gradient(ellipse 73px 96px at 50% 50%, #0f0 0%, transparent 100%),
-                      radial-gradient(ellipse 76px 77px at 50% 50%, #0f0 0%, transparent 100%),
-                      radial-gradient(ellipse 66px 51px at 50% 50%, #0f0 0%, transparent 100%),
-                      radial-gradient(ellipse 90px 57px at 50% 50%, #0f0 0%, transparent 100%),
-                      radial-gradient(ellipse 89px 93px at 50% 50%, #0f0 0%, transparent 100%);
-    background-size: 726px 576px, 1242px 454px, 876px 1160px, 691px 873px, 914px 550px, 1159px 340px, 1017px 831px, 313px 977px;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/circuit-board.png'); /* Circuit-like pattern */
+    opacity: 0.3;
+    animation: circuitGlow 4s infinite alternate;
 }
 
-@keyframes blobs-1e28bd3d {
-    0% { background-position: 271px 478px, 62px 291px, 67px 861px, 553px 413px, 36px 392px, 1077px 226px, 400px 799px, 7px 264px; }
-    to { background-position: -14975px -2978px, 31112px 11187px, -20081px 8981px, 11609px -3952px, -12760px 12492px, -9354px 2946px, 9553px 21574px, 946px 9057px; }
+@keyframes circuitGlow {
+    0% { filter: hue-rotate(200deg) brightness(1.2); }
+    100% { filter: hue-rotate(220deg) brightness(1.5); }
 }
 
-@keyframes thingy {
-    0% { filter: var(--f) hue-rotate(0deg); }
-    to { filter: var(--f) hue-rotate(1turn); }
+/* Digital Grid Overlay */
+.container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 255, 255, 0.2) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+}
+
+/* Animated AI & Robot Elements */
+.robot {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+    animation: floaty 6s ease-in-out infinite alternate;
+}
+
+.robot-1 { top: 10%; left: 10%; animation-delay: 0s; }
+.robot-2 { top: 40%; left: 80%; animation-delay: 1s; }
+.robot-3 { top: 70%; left: 50%; animation-delay: 2s; }
+
+@keyframes floaty {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-15px) scale(1.05); }
 }
 
 /* Centered Content Box */
 .content {
     position: relative;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
     backdrop-filter: blur(10px);
 }
 
 /* Button Styling */
-.btn-31,
-.btn-31 *,
-.btn-31 :after,
-.btn-31 :before,
-.btn-31:after,
-.btn-31:before {
-    border: 0 solid;
-    box-sizing: border-box;
-}
-
 .btn-31 {
-    -webkit-tap-highlight-color: transparent;
-    background-color: transparent;
+    background: linear-gradient(45deg, #00ccff, #0077ff);
     color: white;
     cursor: pointer;
     font-size: 18px;
     font-weight: 900;
-    line-height: 1.5;
     margin: 10px;
     padding: 15px;
     text-align: center;
@@ -100,49 +93,31 @@ body {
     display: inline-block;
     position: relative;
     border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.6);
+    transition: transform 0.2s ease-in-out;
 }
 
-.btn-31:before {
-    --progress: 100%;
-    background: white;
-    -webkit-clip-path: polygon(100% 0, var(--progress) var(--progress), 0 100%, 100% 100%);
-    clip-path: polygon(100% 0, var(--progress) var(--progress), 0 100%, 100% 100%);
-    content: "";
-    inset: 0;
-    position: absolute;
-    transition: clip-path 0.2s ease;
+.btn-31:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 1);
 }
 
+/* Glowing AI & Robotics Hover Effect */
 .btn-31:hover:before {
-    --progress: 0%;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.5) 0%, transparent 70%);
+    border-radius: 8px;
+    animation: glowEffect 0.6s infinite alternate;
 }
 
-.btn-31 .text-container {
-    display: block;
-    overflow: hidden;
-    position: relative;
-}
-
-.btn-31 .text {
-    display: block;
-    font-weight: 900;
-    mix-blend-mode: difference;
-    position: relative;
-}
-
-.btn-31:hover .text {
-    animation: move-up-alternate 0.3s ease forwards;
-}
-
-/* Keyframe Animation */
-@keyframes move-up-alternate {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(80%); }
-    51% { transform: translateY(-80%); }
-    to { transform: translateY(0); }
+@keyframes glowEffect {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
 }
 
 /* Custom Colors for Each Button */
-.whatsapp { background: green; }
-.linkedin { background: #0077b5; }
-.instagram { background: #e1306c; }
+.whatsapp { background: linear-gradient(45deg, #25D366, #128C7E); }
+.linkedin { background: linear-gradient(45deg, #0077b5, #005582); }
+.instagram { background: linear-gradient(45deg, #e1306c, #c13584); }
