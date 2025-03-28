@@ -76,10 +76,14 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
     backdrop-filter: blur(10px);
-    
+
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Ensure buttons are stacked vertically */
     align-items: center;
+    gap: 15px; /* Adds space between buttons */
+    width: 80%; /* Adjust width to center properly */
+    max-width: 400px; /* Limit width for better UI */
+
 }
 
 /* Button Styling */
@@ -94,6 +98,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     width: 100%;
+    max-width: 300px; 
     display: inline-block;
     position: relative;
     border-radius: 8px;
