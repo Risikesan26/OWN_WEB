@@ -1,125 +1,63 @@
-/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 50px;
     margin: 0;
+    padding: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000428;
-    overflow: hidden;
-}
-
-/* Futuristic AI Background */
-.container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     background: radial-gradient(circle at center, #0044ff 20%, #000428 80%);
     overflow: hidden;
 }
 
-/* Animated Circuit Lines */
-.container::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/circuit-board.png'); /* Circuit-like pattern */
-    opacity: 0.3;
-    animation: circuitGlow 4s infinite alternate;
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@keyframes circuitGlow {
-    0% { filter: hue-rotate(200deg) brightness(1.2); }
-    100% { filter: hue-rotate(220deg) brightness(1.5); }
+.profile-img {
+    width: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
 }
 
-/* Digital Grid Overlay */
-.container::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(0, 255, 255, 0.2) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(0, 255, 255, 0.2) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.3;
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* Animated AI & Robot Elements */
-.robot {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    opacity: 0.8;
-    animation: floaty 6s ease-in-out infinite alternate;
-}
-
-.robot-1 { top: 10%; left: 10%; animation-delay: 0s; }
-.robot-2 { top: 40%; left: 80%; animation-delay: 1s; }
-.robot-3 { top: 70%; left: 50%; animation-delay: 2s; }
-
-@keyframes floaty {
-    0% { transform: translateY(0) scale(1); }
-    100% { transform: translateY(-15px) scale(1.05); }
-}
-
-/* Centered Content Box */
-.content {
-    display: flex !important; /* Force flexbox */
-    flex-direction: column !important; /* Ensure vertical stacking */
-    align-items: center !important; /* Center align items */
-    justify-content: center !important; /* Center within the div */
-    gap: 15px; /* Add spacing between buttons */
-    width: 100%; /* Ensure full width */
-    max-width: 400px; /* Prevent excessive stretching */
-    margin: auto; /* Center the content */
-}
-
-/* Button Styling */
-.btn-31 {
-    background: linear-gradient(45deg, #00ccff, #0077ff);
-    color: white;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 900;
-    margin: 10px;
-    padding: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-    max-width: 300px; 
+.btn {
     display: inline-block;
-    position: relative;
+    padding: 15px;
+    width: 200px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.6);
-    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.3s;
 }
 
-.btn-31:hover {
+.btn:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 20px rgba(0, 255, 255, 1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
-/* Glowing AI & Robotics Hover Effect */
-.btn-31:hover:before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle, rgba(0, 255, 255, 0.5) 0%, transparent 70%);
-    border-radius: 8px;
-    animation: glowEffect 0.6s infinite alternate;
-}
-
-@keyframes glowEffect {
-    0% { opacity: 0.6; }
-    100% { opacity: 1; }
-}
-
-/* Custom Colors for Each Button */
 .whatsapp { background: linear-gradient(45deg, #25D366, #128C7E); }
 .linkedin { background: linear-gradient(45deg, #0077b5, #005582); }
 .instagram { background: linear-gradient(45deg, #e1306c, #c13584); }
+
+@keyframes floaty {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
