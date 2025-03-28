@@ -69,14 +69,14 @@ body {
 
 /* Centered Content Box */
 .content {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center;
-    gap: 15px; /* Space between buttons */
-    width: 80%;
-    max-width: 400px;
-    margin: auto; /* Center content */
-
+    display: flex !important; /* Force flexbox */
+    flex-direction: column !important; /* Ensure vertical stacking */
+    align-items: center !important; /* Center align items */
+    justify-content: center !important; /* Center within the div */
+    gap: 15px; /* Add spacing between buttons */
+    width: 100%; /* Ensure full width */
+    max-width: 400px; /* Prevent excessive stretching */
+    margin: auto; /* Center the content */
 }
 
 /* Button Styling */
