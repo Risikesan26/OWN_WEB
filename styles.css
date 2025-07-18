@@ -1,83 +1,115 @@
-/* CSS (styles.css) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(circle at center, #0044ff 20%, #000428 80%);
-    overflow: hidden;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #0d0d0d;
+  color: #e0f7fa;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+header {
+  background: #1a1a1a;
+  padding: 50px 0;
+  text-align: center;
+}
+
+header p {
+  color: #cccccc;
+  font-size: 1.1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  font-weight: bold;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.skill-box {
+  background-color: #1a1a1a;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffff88;
+}
+.typewriter {
+  border-left: 2px solid #00ffff;
+  padding-left: 10px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .profile-img {
-    width: 120px;
-    border-radius: 50%;
-    border: 3px solid white;
+  width: 150px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: block;
+  border: 3px solid #00ffff;
 }
 
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px;
-    width: 200px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.3s;
+.project {
+  background: #1a1a1a;
+  padding: 20px;
+  margin-top: 20px;
+  border-left: 4px solid #00ffff;
+  border-radius: 8px;
 }
 
-.btn::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    border-radius: 8px;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    animation: neonGlow 1.5s infinite alternate;
-}
-
-@keyframes neonGlow {
-    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
-    100% { box-shadow: 0 0 15px rgba(255, 255, 255, 1); }
-}
-
-.btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-}
-
-.whatsapp { background: linear-gradient(45deg, #25D366, #128C7E); }
-.linkedin { background: linear-gradient(45deg, #0077b5, #005582); }
-.instagram { background: linear-gradient(45deg, #e1306c, #c13584); }
-
-@keyframes floaty {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-15px); }
+footer {
+  background: #121212;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
 }
