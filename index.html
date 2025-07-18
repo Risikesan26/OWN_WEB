@@ -1,23 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risikesan Yogeswaran</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Risikesan | AI & Robotics Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+  <header>
     <div class="container">
-        <div class="profile">
-            <img src="image1.jpg" alt="Risikesan Yogeswaran" class="profile-img">
-            <h2>Risikesan Yogeswaran</h2>
-            <p>AI Enthusiast | Robotics Trainer</p>
-        </div>
-        <div class="buttons">
-            <a href="https://wa.me/+60176679964" class="btn whatsapp">WhatsApp</a>
-            <a href="https://www.linkedin.com/in/risikesan-yogeswaran-a25ba9281" class="btn linkedin">LinkedIn</a>
-            <a href="https://www.instagram.com/risikesan26/" class="btn instagram">Instagram</a>
-        </div>
+      <h1>Risikesan Yogeswaran</h1>
+      <p>AI Student | Robotics Trainer | Computer Vision Enthusiast</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <img src="assets/your-photo.jpg" alt="Risikesan" class="profile-img" />
+      <h2>About Me</h2>
+      <p class="typewriter" id="aboutText"></p>
+    </div>
+  </section>
+
+ <div class="skills-grid">
+  <div class="skill-box">Python</div>
+  <div class="skill-box">C++</div>
+  <div class="skill-box">JavaScript</div>
+  <div class="skill-box">OpenCV</div>
+  <div class="skill-box">TensorFlow</div>
+  <div class="skill-box">YOLO</div>
+  <div class="skill-box">Raspberry Pi</div>
+  <div class="skill-box">ESP32</div>
+  <div class="skill-box">Arduino</div>
+  <div class="skill-box">Machine Learning</div>
+  <div class="skill-box">Computer Vision</div>
+  <div class="skill-box">Web Development</div>
+</div>
+
+
+  <section id="projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="project">
+        <h3>Smart Disaster Prediction & Alert Station</h3>
+        <p>AI + camera + sensors to detect fire, floods, and pollution. Built on Raspberry Pi with cloud-linked dashboards for firefighters and citizens.</p>
+      </div>
+      <div class="project">
+        <h3>TapTrivia RFID Game</h3>
+        <p>Interactive trivia game using ESP32, RFID cards, LCD & OLEDs with real-time scoring and LED effects. A blend of gamification and embedded systems.</p>
+      </div>
+      <div class="project">
+        <h3>Scratch Olympiad Malaysia</h3>
+        <p>Organized a nationwide competition for 800+ students, promoting youth coding and innovation. Managed logistics, sponsorship, and engagement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Connect With Me</h2>
+      <p><i class="fas fa-envelope"></i> yourname@email.com</p>
+      <p><i class="fab fa-linkedin"></i> <a href="#">linkedin.com/in/yourname</a></p>
+      <p><i class="fab fa-github"></i> <a href="#">github.com/yourusername</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Risikesan Yogeswaran | AI & Robotics</p>
+    </div>
+  </footer>
 </body>
 </html>
