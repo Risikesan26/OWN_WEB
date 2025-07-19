@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", typeWriter);
 // Typed.js for rotating roles under name
 document.addEventListener("DOMContentLoaded", () => {
   new Typed("#typed-role", {
-    strings: ["AI & Robotics", "Machine Learning", "Computer Vision", "Embedded Systems", "IoT Development", "Tech Education"],
+    strings: ["Robotics", "Machine Learning", "Computer Vision", "Embedded Systems", "IoT Development", "Tech Education"],
     typeSpeed: 70,
     backSpeed: 40,
     backDelay: 1500,
